@@ -1,0 +1,28 @@
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Yahoo Finance scraper initialized
+2026-02-04 22:47:44 | INFO     | TradingAgent              | FINVIZ scraper initialized
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Investing.com scraper initialized
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Pattern detector initialized
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Analysis components initialized
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Markdown generator initialized
+2026-02-04 22:47:44 | INFO     | TradingAgent              | ============================================================
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Trading Agent started at 2026-02-04 22:47:44.279956
+2026-02-04 22:47:44 | INFO     | TradingAgent              | ============================================================
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Processing 9 stocks: AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, SPY, QQQ
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Tracking 3 futures: ES, NQ, YM
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Starting: Data collection
+2026-02-04 22:47:44 | INFO     | TradingAgent              | Fetching Yahoo Finance data...
+2026-02-04 22:47:48 | INFO     | TradingAgent              |   Retrieved data for 9 symbols
+2026-02-04 22:47:49 | INFO     | TradingAgent              |   Retrieved futures data for 3 contracts
+2026-02-04 22:47:49 | INFO     | TradingAgent              | Fetching FINVIZ data...
+2026-02-04 22:47:50 | WARNING  | FinvizScraper             | Could not find snapshot table for AAPL
+2026-02-04 22:47:52 | WARNING  | FinvizScraper             | Could not find snapshot table for MSFT
+2026-02-04 22:47:55 | WARNING  | FinvizScraper             | Could not find snapshot table for GOOGL
+2026-02-04 22:47:59 | WARNING  | FinvizScraper             | Could not find snapshot table for AMZN
+2026-02-04 22:48:01 | WARNING  | FinvizScraper             | Could not find snapshot table for NVDA
+2026-02-04 22:48:05 | WARNING  | FinvizScraper             | Could not find snapshot table for META
+2026-02-04 22:48:08 | WARNING  | FinvizScraper             | Could not find snapshot table for TSLA
+2026-02-04 22:48:11 | WARNING  | FinvizScraper             | Could not find snapshot table for SPY
+2026-02-04 22:48:14 | WARNING  | FinvizScraper             | Could not find snapshot table for QQQ
+2026-02-04 22:48:14 | INFO     | TradingAgent              |   Retrieved data for 0 symbols
+2026-02-04 22:48:14 | INFO     | TradingAgent              | Fetching Investing.com futures data...
+2026-02-04 22:48:14 | INFO     | InvestingComScraper       | First run: downloading/initializing Chromium for JS rendering...

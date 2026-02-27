@@ -1,0 +1,129 @@
+# Trading Data Agent Configuration
+# ================================
+
+# General settings
+general:
+  output_directory: "./output"
+  log_directory: "./logs"
+  log_level: "INFO"
+  timezone: "America/New_York"
+
+# Symbols to track
+watchlist:
+  stocks:
+    # --- Mining & Materials ---
+    - NEM   # Newmont - Gold mining
+    - FCX   # Freeport-McMoRan - Copper/gold
+    - BHP   # BHP Group - Diversified mining
+    - RIO   # Rio Tinto - Diversified mining
+    - VALE  # Vale - Iron ore/nickel
+    - AA    # Alcoa - Aluminum
+    - NUE   # Nucor - Steel
+    - CLF   # Cleveland-Cliffs - Iron ore/steel
+    - MP    # MP Materials - Rare earth
+    - ALB   # Albemarle - Lithium
+    - SCCO  # Southern Copper - Copper
+
+    # --- Artificial Intelligence ---
+    - NVDA  # NVIDIA - AI chips (leader)
+    - AMD   # AMD - AI/ML chips
+    - MSFT  # Microsoft - Azure AI/OpenAI
+    - GOOGL # Google - AI/ML
+    - META  # Meta - AI infrastructure
+    - PLTR  # Palantir - AI analytics
+    - SMCI  # Super Micro - AI servers
+    - ARM   # Arm Holdings - AI chip design
+    - AVGO  # Broadcom - AI networking
+    - MRVL  # Marvell - AI infrastructure
+    - SNOW  # Snowflake - Data/AI cloud
+    - AI    # C3.ai - Enterprise AI
+
+    # --- Energy Production ---
+    - XOM   # Exxon Mobil - Oil & gas
+    - CVX   # Chevron - Oil & gas
+    - COP   # ConocoPhillips - Oil & gas
+    - OXY   # Occidental - Oil & gas
+    - SLB   # Schlumberger - Oil services
+    - EOG   # EOG Resources - Oil & gas
+    - NEE   # NextEra Energy - Renewables
+    - CEG   # Constellation Energy - Nuclear
+    - VST   # Vistra - Power generation
+    - FSLR  # First Solar - Solar
+    - ENPH  # Enphase - Solar inverters
+
+    # --- Sector ETFs ---
+    - XME   # SPDR Metals & Mining ETF
+    - XLE   # Energy Select Sector ETF
+    - SMH   # VanEck Semiconductor ETF
+    - SPY   # S&P 500 ETF (benchmark)
+
+  futures:
+    - ES  # S&P 500 E-mini
+    - NQ  # NASDAQ E-mini
+    - YM  # Dow E-mini
+    - CL  # Crude Oil
+    - GC  # Gold
+
+# Data source configuration
+sources:
+  yahoo_finance:
+    enabled: true
+    rate_limit_seconds: 0.5
+    timeout: 30
+    retry_attempts: 3
+
+  finviz:
+    enabled: true
+    rate_limit_seconds: 3.0
+    timeout: 30
+    retry_attempts: 3
+
+  investing_com:
+    enabled: true
+    rate_limit_seconds: 8.0
+    timeout: 60
+    retry_attempts: 2
+    javascript_render: true
+
+  stockcharts:
+    enabled: true
+    use_local_patterns: true
+    pattern_lookback_days: 60
+
+# Retry configuration
+retry:
+  max_attempts: 3
+  initial_delay: 4
+  max_delay: 60
+  exponential_base: 2
+
+# Signal weights (0.0 to 1.0)
+signal_weights:
+  source_weights:
+    "Yahoo Finance": 1.0
+    "FINVIZ": 0.8
+    "Investing.com": 0.6
+    "StockCharts / Pattern Analysis": 0.7
+
+  signal_type_weights:
+    RSI: 0.8
+    MACD: 0.9
+    SMA_Cross: 1.0
+    Volume: 0.6
+    Pattern: 0.7
+    Insider: 0.5
+    Analyst_Target: 0.4
+    Futures_Trend: 0.6
+
+# Recommendation thresholds
+recommendation:
+  strong_threshold: 0.6
+  moderate_threshold: 0.3
+  min_confidence: 0.5
+  high_confidence: 0.7
+
+# Scheduler settings (for reference - use Windows Task Scheduler)
+scheduler:
+  enabled: false
+  run_time: "07:00"
+  weekdays_only: true

@@ -1,0 +1,21 @@
+# Trading Data Agent Dependencies
+
+# Core
+yfinance>=0.2.36
+pandas>=2.0.0
+numpy>=1.24.0
+
+# HTTP and Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+lxml_html_clean>=0.4.0
+playwright>=1.40.0
+brotli>=1.0.0
+
+# Configuration
+pyyaml>=6.0
+
+# Utilities
+tenacity>=8.2.0
+fake-useragent>=1.4.0
